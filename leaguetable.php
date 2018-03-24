@@ -64,7 +64,7 @@
 
 						<tr >
 							<td>1</td>
-							<td><img src="css/images/mi.png" class="miimage">Mumbai Indians</img></td>
+							<td><img src="css/images/mi.png" class="miimage"><span class="tab">Mumbai Indians</span></img></td>
 							<td>0</td>
 							<td>0</td>
 							<td>0</td>
@@ -74,7 +74,7 @@
 
 						<tr >
 							<td>2</td>
-							<td><img src="css/images/csk.png" class="miimage">Chennai Super Kings</img></td>
+							<td><img src="css/images/csk.png" class="miimage"><span class="tab">Chennai Super Kings</span></img></td>
 							<td>0</td>
 							<td>0</td>
 							<td>0</td>
@@ -84,7 +84,7 @@
 
 						<tr >
 							<td>3</td>
-							<td><img src="css/images/rcb.png" class="miimage">Royal Challengers Banglore</img></td><
+							<td><img src="css/images/rcb.png" class="miimage"><span class="tab">Royal Challengers Banglore</span></img></td><
 							<td>0</td>
 							<td>0</td>
 							<td>0</td>
@@ -94,7 +94,7 @@
 
 						<tr >
 							<td>4</td>
-							<td><img src="css/images/srh.png" class="miimage">Sunrisers Hyderabad</img></td>
+							<td><img src="css/images/srh.png" class="miimage"><span class="tab">Sunrisers Hyderabad</span></img></td>
 							<td>0</td>
 							<td>0</td>
 							<td>0</td>
@@ -104,7 +104,7 @@
 
 						<tr >
 							<td>5</td>
-							<td><img src="css/images/dd.png" class="miimage">Delhi Daredevils</img></td>
+							<td><img src="css/images/dd.png" class="miimage"><span class="tab">Delhi Daredevils</span></img></td>
 							<td>0</td>
 							<td>0</td>
 							<td>0</td>
@@ -114,7 +114,7 @@
 
 						<tr >
 							<td>6</td>
-							<td><img src="css/images/kkr.png" class="miimage">Kolkata Knight Riders</img></td>
+							<td><img src="css/images/kkr.png" class="miimage"><span class="tab">Kolkata Knight Riders</span></img></td>
 							<td>0</td>
 							<td>0</td>
 							<td>0</td>
@@ -124,7 +124,7 @@
 
 						<tr >
 							<td>7</td>
-							<td><img src="css/images/kxip.png" class="miimage">Kings XI Punjab</img></td>
+							<td><img src="css/images/kxip.png" class="miimage"><span class="tab">Kings XI Punjab</span></img></td>
 							<td>0</td>
 							<td>0</td>
 							<td>0</td>
@@ -134,7 +134,7 @@
 
 						<tr >
 							<td>8</td>
-							<td><img src="css/images/rr.png" class="miimage">Rajasthan Royals</img></td>
+							<td><img src="css/images/rr.png" class="miimage"><span class="tab">Rajasthan Royals</span></img></td>
 							<td>0</td>
 							<td>0</td>
 							<td>0</td>
