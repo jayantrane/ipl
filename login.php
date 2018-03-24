@@ -34,8 +34,8 @@
 			<div class="col-md-12">
 				<h3>Menu</h3>
 				<ul class="nav nav-stacked">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Points Table</a></li>
+					<li class="active"><a href="home.php">Home</a></li>
+					<li><a href="leaguetable.php">Points Table</a></li>
                   	<li><a href="#">Schedule</a></li>
                   	<li><a href="#">Player Stats</a></li>
                   	<li><a href="#">Teams</a></li>
