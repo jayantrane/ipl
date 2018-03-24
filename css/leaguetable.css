@@ -1,14 +1,31 @@
-body,html,.row-offcanvas {
-  height:100%;
+*{
+	color: #1576b9;
 }
 
-body {
-  padding-top: 50px;
-  background: url(images/login1.jpg) no-repeat center center fixed; 
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+body{
+	background: url(images/login1.jpg) no-repeat center center fixed; 
+ 	 -webkit-background-size: cover;
+  	-moz-background-size: cover;
+ 	 -o-background-size: cover;
+ 	 background-size: cover;
+}
+
+.miimage{
+		width: 30px;
+		height: 30px;
+}
+
+
+.table-container{
+	padding: 30px;
+	margin-top: 20vh;
+	margin-bottom: 20vh;
+	margin-left: 50px;
+	background: #fff;
+}
+
+body,html,.row-offcanvas{
+	height: 100%;
 }
 
 #sidebar {
@@ -21,10 +38,6 @@ body {
   position:relative;
   overflow-y:auto;
   overflow-x:hidden;
-}
-#main {
-  height:100%;
-  overflow:auto;
 }
 
 /*
@@ -67,7 +80,8 @@ body {
 .navbar-header a{
     color: white !important;
     font-size: 1.8em !important;
-    }
+ }
+
 #sidebar {
     background: transparent;
     color: #fff;
@@ -94,10 +108,13 @@ body {
     font-size: 1.1em;
     display: block;
 }
+
 #sidebar ul li a:hover {
     color: #4B088A;
     background: #6A0888;
-}#sidebar ul li a:visited {
+}
+
+#sidebar ul li a:visited {
     color: #4B088A;
     background: #6A0888;
 }
@@ -106,4 +123,3 @@ body {
     color: #4B088A;
     background: #3B0B39;
 }
-
