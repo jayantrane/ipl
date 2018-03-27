@@ -1,3 +1,23 @@
+<?php
+
+$mysqli = mysqli_connect("localhost","root","","ipldb");
+
+@$user=$_POST['Username'];
+@$pass=$_POST['Password'];
+
+$sql="select * from user where username='".$user."' and password='".$pass."'  ";
+
+$result=mysqli_query($mysqli,$sql);
+
+if(mysqli_num_rows($result)){
+	echo "You have successfully registered";
+}
+else{
+	echo "You have entered wrong credentials";
+}
+
+ ?>
+
 <!DOCTYPE html>
 
 <html>
@@ -53,16 +73,18 @@
 
 			<div class="col-md-4 col-sm-4 col-xs-12">
 				
-				<form method="post" class="form-container" action="home.php">
+				<form method="post" class="form-container" action="#" autocomplete="off">
+
+					
 					
 					<!--<center><h1>Administrator Login</h1></center>-->
 
 					<div class="form-group">
 						<label for="exampleInputUsername">Username</label>
-						<input type="text" class="form-control" id="exampleInputUsername" placeholder="Username">
+						<input type="text" class="form-control" id="exampleInputUsername" placeholder="Username" name="Username" required>
 
 						<label for="exampleInputPassword">Password</label>
-						<input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+						<input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" name="Password" required>
 
 						<!--<label for="exampleInputFile">File Input</label>
 						<input type="file" id="exampleInputFile">*/-->
@@ -76,7 +98,7 @@
 						</label>
 					</div>
 
-					<center><button type="submit" class="btn btn-success btn-block">Log In</button></center>
+					<center><button type="submit" class="btn btn-success btn-block" name="Login">Log In</button></center>
 
 				</form>
 
