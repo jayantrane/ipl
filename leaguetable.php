@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$_SESSION['onpage'] = 'leaguetable';
 
 $mysqli=mysqli_connect("localhost","root","","ipldb");
 
@@ -33,22 +34,20 @@ for($i=1;$i<9;$i++){
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="css/mynavigation.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/leaguetable.css">
 
-	<title>leaguetable</title>
+	<title>IPL</title>
 </head>
 
 <body>
-	<div class="mynavigation">
-      <?php include 'mynavigation.php';?>
-    </div>
 
-	<div class="main">
-	
-	<div class="container-fluid bg">
+	<!-- always include two </div> elements before </body> -->
+	<?php include 'mynavigation.php';?>
 
-		<div class="container ">
+		    <div class="col-md-10 main">
 
 				<div class="table-responsive">
 
@@ -144,11 +143,11 @@ for($i=1;$i<9;$i++){
 							<td><?= $values[8][6] ?></td>
 						</tr>
 					</table>
+				</div>
 			</div>
-
 		</div>
-
 	</div>
+
 
 </body>
 

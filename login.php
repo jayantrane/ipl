@@ -11,25 +11,20 @@ session_start();
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="css/mynavigation.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/login.css">
 
-	<title>loginpage</title>
+	<title>IPL</title>
 </head>
 
 <body>
 
 	
-
-	<div class="mynavigation">
-      <?php include 'mynavigation.php';?>
-    </div>
-
-    <div class="main">
-
-	<div class="container-fluid">
-
-		<div class="row">
+	<!-- always include two </div> elements before </body> -->
+	<?php include 'mynavigation.php';?>
+    <div class="col-md-10 main">
 
 			<div class="col-md-4 col-sm-4 col-xs-12">
 			</div>
@@ -73,7 +68,8 @@ session_start();
 			</div>
 
 		</div>
-
+	</div>
+	</div>
 	</div>
 
 	</div>

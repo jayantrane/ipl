@@ -1,7 +1,15 @@
 *{
 	color: #1576b9;
 }
-
+.menu12{
+	color: white;
+}
+.glyphicon-log-in{
+	color: white;
+}
+.glyphicon-log-out{
+	color: white;
+}
 body{
 	background: url(images/login1.jpg) no-repeat center center fixed; 
  	 -webkit-background-size: cover;
@@ -21,6 +29,7 @@ body{
 }
 
 .table-container{
+	color: blue;
 	padding: 30px;
 	margin-top: 20vh;
 	margin-bottom: 20vh;

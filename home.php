@@ -2,6 +2,7 @@
 session_start();
 if(empty($_SESSION['isLoggedIn']))
   $_SESSION['isLoggedIn'] = false;
+$_SESSION['onpage'] = 'home';
 ?>
 
 <!DOCTYPE html>
@@ -11,8 +12,9 @@ if(empty($_SESSION['isLoggedIn']))
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="css/mynavigation.css">
     <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="css/home.css">
 
     <title>IPL</title>
 </head>
