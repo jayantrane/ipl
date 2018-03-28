@@ -1,29 +1,6 @@
-<<<<<<< HEAD
 <?php 
 session_start();
 ?>
-=======
-<?php
-
-$mysqli = mysqli_connect("localhost","root","","ipldb");
-
-@$user=$_POST['Username'];
-@$pass=$_POST['Password'];
-
-$sql="select * from user where username='".$user."' and password='".$pass."'  ";
-
-$result=mysqli_query($mysqli,$sql);
-
-if(mysqli_num_rows($result)==1){
-	echo "You have successfully registered";
-}
-else{
-	echo "You have entered wrong credentials";
-}
-
- ?>
-
->>>>>>> 8ffcf20ab1a79e45b08f99ecdf28a71937a83c40
 <!DOCTYPE html>
 
 <html>

@@ -13,7 +13,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <?php if(!$_SESSION['isLoggedIn']) { ?>
-               <a href="login.php"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+               <a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
              <?php } else {?>
                 <a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
              <?php } ?>
