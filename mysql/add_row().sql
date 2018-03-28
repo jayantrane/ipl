@@ -1,3 +1,4 @@
+delimiter //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `add_row`(IN `fid1` INT, IN `fid2` INT, IN `incr` INT)
     MODIFIES SQL DATA
 BEGIN
@@ -11,3 +12,4 @@ BEGIN
     END IF;
     UPDATE matches SET matchdate=@maxdate WHERE pid_matches=@maxid;   
 END
+//
