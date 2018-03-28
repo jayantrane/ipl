@@ -28,11 +28,11 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div id="sidebar" class="sidebar col-md-2">
+    <div id="sidebar" class="sidebar navbar-left col-md-2">
       <div class="menu12">
           <h3>Menu</h3>
       </div>
-          <ul class="nav nav-sidebar">
+          <ul class="nav nav-sidebar ">
             <li <?php if($_SESSION['onpage'] == 'home'){?> class="active" <?php } ?> ><a href="home.php">Home</a></li>
             <li <?php if($_SESSION['onpage'] == 'leaguetable'){?> class="active" <?php } ?> ><a href="leaguetable.php">Points Table</a></li>
             <li <?php if($_SESSION['onpage'] == 'schedule'){?> class="active" <?php } ?> ><a href="">Schedule</a></li>

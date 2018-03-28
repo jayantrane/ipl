@@ -29,8 +29,7 @@
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/mynavigation.css">
     <link rel="stylesheet" href="css/teams.css">
-    <link rel="icon" href="<?php echo $icon; ?>">
-	<title><?php echo $title['name']; ?></title>
+	<title>IPL</title>
 </head>
 
 <body>
@@ -39,7 +38,7 @@
     		<div class="col-md-10 main">
 				<div class="row">
 					<div class="card col-md-4 text-center"><img class="card-img-top-team" src="<?php echo $icon; ?>"></div>
-					<div class="card col-md-6" style="margin-top: 4vh; margin-left: 2vh;">
+					<div class="card col-md-6 teaminfofont" style="margin-top: 4vh; margin-left: 2vh;">
 						<h1><?php echo $title['name']; ?></br></br></h1>
 						<h3>Captain:   <?php echo $title['captain'];?> </br></h3>
 						<h3>Venue  :    <?php echo $title['venue'];?></h3>
