@@ -32,7 +32,7 @@
                   <li><a href="leaguetable.php">Points Table</a></li>
                   <li><a href="#">Schedule</a></li>
                   <li><a href="#">Player Stats</a></li>
-                  <li><a href="#">Teams</a></li>
+                  <li><a href="teams.php">Teams</a></li>
                   <li><a href="#">About Us</a></li>
                 </ul>
             </div>
