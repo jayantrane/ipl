@@ -9,7 +9,7 @@ $sql="select * from user where username='".$user."' and password='".$pass."'  ";
 
 $result=mysqli_query($mysqli,$sql);
 
-if(mysqli_num_rows($result)){
+if(mysqli_num_rows($result)==1){
 	echo "You have successfully registered";
 }
 else{
