@@ -21,18 +21,16 @@ $_SESSION['onpage'] = 'home';
 <body>
 
    
-    <div class="mynavigation">
-      <?php include 'mynavigation.php';?>
-    </div>
-
+    <!-- always include two </div> elements before </body> -->
+  <?php include 'mynavigation.php';?>
      <!-- Start Your Code Here -->
 
-        <div id="main">
+      <div id="main">
 
 
-        </div>
-
+      </div>
     </div>
+  </div>
   
     <!-- SCRIPTS -->
     <!-- JQuery -->
