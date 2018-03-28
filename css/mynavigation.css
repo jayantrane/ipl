@@ -1,25 +1,10 @@
-@media (min-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 10px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
-  }
-}
-
 
 body,html,.row-offcanvas {
   height:100%;
 }
 
-.main {
+body {
   padding-top: 50px;
-  padding-left: 100px;
   background: url(images/login1.jpg) no-repeat center center fixed; 
    -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -43,7 +28,33 @@ body,html,.row-offcanvas {
   overflow:auto;
 }
 
+/*
+ * off Canvas sidebar
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    width:calc(100% + 220px);
+  }
+    
+  .row-offcanvas-left
+  {
+    left: -220px;
+  }
 
+  .row-offcanvas-left.active {
+    left: 0;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+  }
+}
 
 
 .nav a{
