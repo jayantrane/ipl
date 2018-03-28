@@ -1,23 +1,6 @@
-<?php
-
-$mysqli = mysqli_connect("localhost","root","","ipldb");
-
-@$user=$_POST['Username'];
-@$pass=$_POST['Password'];
-
-$sql="select * from user where username='".$user."' and password='".$pass."'  ";
-
-$result=mysqli_query($mysqli,$sql);
-
-if(mysqli_num_rows($result)){
-	echo "You have successfully registered";
-}
-else{
-	echo "You have entered wrong credentials";
-}
-
- ?>
-
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 
 <html>
@@ -36,33 +19,13 @@ else{
 
 <body>
 
-	<div class="main">
+	
 
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">IPL</a>
-			</div>
-			<ul class="nav navbar-nav navbar-right">
-            	<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          	</ul>
-		</div>
-	</div>
+	<div class="mynavigation">
+      <?php include 'mynavigation.php';?>
+    </div>
 
-	<div class="row-offcanvas row-offcanvas-left">
-		<div id="sidebar" class="sidebar-offcanvas">
-			<div class="col-md-12">
-				<h3>Menu</h3>
-				<ul class="nav nav-stacked">
-					<li class="active"><a href="home.php">Home</a></li>
-					<li><a href="leaguetable.php">Points Table</a></li>
-                  	<li><a href="#">Schedule</a></li>
-                  	<li><a href="#">Player Stats</a></li>
-                  	<li><a href="#">Teams</a></li>
-                  	<li><a href="#">About Us</a></li>
-                  </ul>
-			</div>	
-	</div>
+    <div class="main">
 
 	<div class="container-fluid">
 
@@ -73,23 +36,25 @@ else{
 
 			<div class="col-md-4 col-sm-4 col-xs-12">
 				
-				<form method="post" class="form-container" action="#" autocomplete="off">
-
+				<form method="post" class="form-container" action = "home.php" autocomplete="off">
+				<!-- <form class = "form-signin" role = "form" 
+            action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
+            ?>" method = "post"> -->
 					
 					
 					<!--<center><h1>Administrator Login</h1></center>-->
 
 					<div class="form-group">
 						<label for="exampleInputUsername">Username</label>
-						<input type="text" class="form-control" id="exampleInputUsername" placeholder="Username" name="Username" required>
+						<input type="text" class="form-control" id="exampleInputUsername" placeholder="username" name="username" required>
 
 						<label for="exampleInputPassword">Password</label>
-						<input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" name="Password" required>
+						<input type="password" class="form-control" id="exampleInputPassword" placeholder="password" name="password" required>
 
 						<!--<label for="exampleInputFile">File Input</label>
 						<input type="file" id="exampleInputFile">*/-->
 						<br>
-						<center><a href="frogotpass.php" class="help-block">Forgot Password</a></center>
+						<center><a href="forgot.php" class="help-block">Forgot Password</a></center>
 					</div>
 
 					<div class="checkbox">

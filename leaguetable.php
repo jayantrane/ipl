@@ -15,34 +15,11 @@
 </head>
 
 <body>
+	<div class="mynavigation">
+      <?php include 'mynavigation.php';?>
+    </div>
 
 	<div class="main">
-
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">IPL</a>
-			</div>
-			<ul class="nav navbar-nav navbar-right">
-            	<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          	</ul>
-		</div>
-	</div>
-
-	<div class="row-offcanvas row-offcanvas-left">
-		<div id="sidebar" class="sidebar-offcanvas">
-			<div class="col-md-12">
-				<h3>Menu</h3>
-				<ul class="nav nav-stacked">
-					<li class="active"><a href="home.php">Home</a></li>
-					<li><a href="leaguetable.php">Points Table</a></li>
-                  	<li><a href="#">Schedule</a></li>
-                  	<li><a href="#">Player Stats</a></li>
-                  	<li><a href="#">Teams</a></li>
-                  	<li><a href="#">About Us</a></li>
-                  </ul>
-			</div>	
-	</div>
 	
 	<div class="container-fluid bg">
 
