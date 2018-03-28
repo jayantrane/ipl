@@ -29,7 +29,7 @@
 		<div class="container ">
     		<div class="row">
 	  			<div class="col-md-3">
-	  				<a href="teams.php?id=1">
+	  				<a href="teaminfo.php?id=1">
 			  			<div class="card text-center">
 			  				<img class="card-img-top" src="css\images\mi.png">
 			  				<div class="card-body">
@@ -39,7 +39,7 @@
 			  		</a>
 		  		</div>
 		      	<div class="col-md-3">
-		      		<a href="team-info.php?id=2">
+		      		<a href="teaminfo.php?id=2">
 			      		<div class="card text-center">
 			  				<img class="card-img-top" src="css\images\csk.png">
 			  				<div class="card-body">
@@ -49,7 +49,7 @@
 			  		</a>
 		      	</div>
 		      	<div class="col-md-2">
-		      		<a href="#">
+		      		<a href="teaminfo.php?id=3">
 			      		<div class="card text-center">
 			  				<img class="card-img-top" src="css\images\rcb.png">
 			  				<div class="card-body">
@@ -59,7 +59,7 @@
 			  		</a>
 		      	</div>
 		      	<div class="col-md-2">
-		      		<a href="#">
+		      		<a href="teaminfo.php?id=4">
 		      			<div class="card text-center">
 		  					<img class="card-img-top" src="css\images\kkr.png">
 		  					<div class="card-body">
@@ -71,7 +71,7 @@
 		    </div>
 		    <div class="row">
 		      	<div class="col-md-3">
-		      		<a href="#">
+		      		<a href="teaminfo.php?id=5">
 			      		<div class="card text-center">
 			  				<img class="card-img-top" src="css\images\srh.png">
 			  				<div class="card-body">
@@ -81,7 +81,7 @@
 			  		</a>
 		      	</div>
 		      	<div class="col-md-2">
-		      		<a href="#">
+		      		<a href="teaminfo.php?id=6">
 			      		<div class="card text-center">
 			  				<img class="card-img-top" src="css\images\rr.png">
 			  				<div class="card-body">
@@ -91,9 +91,9 @@
 			  		</a>
 		      	</div>
 		      	<div class="col-md-3">
-		      		<a href="#">
+		      		<a href="teaminfo.php?id=7">
 			      		<div class="card text-center">
-			  				<img class="card-img-top" src="css\images\kxip.png">
+			  				<img class="card-img-top " src="css\images\kxip.png">
 			  				<div class="card-body">
 				  				<h5 class="card-title">Kings XI</br>Punjab</h5>
 				  			</div>
@@ -101,9 +101,9 @@
 			  		</a>
 		      	</div>
 		      	<div class="col-md-2">
-		      		<a href="#">
+		      		<a href="teaminfo.php?id=8">
 			      		<div class="card text-center">
-			  				<img class="card-img-top" src="css\images\dd.png">
+			  				<img class="card-img-top " src="css\images\dd.png">
 			  				<div class="card-body">
 				  				<h5 class="card-title">Delhi</br>Daredevils</h5>
 				  			</div>
