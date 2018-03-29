@@ -19,8 +19,8 @@ body{
 }
 
 .miimage{
-		width: 50px;
-		height: 50px;
+		width: 42px;
+		height: 42px;
 }
 
 .tab { 
@@ -35,5 +35,14 @@ body{
 	margin-bottom: 20vh;
 	margin-left: 50px;
 	background: #fff;
+}
+
+td{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.name{
+	text-align: left;
 }
 
