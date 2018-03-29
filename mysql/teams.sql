@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 29, 2018 at 07:07 AM
+-- Generation Time: Mar 29, 2018 at 05:02 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -32,7 +32,7 @@ DROP TABLE IF EXISTS `teams`;
 CREATE TABLE IF NOT EXISTS `teams` (
   `pid_teams` int(11) NOT NULL,
   `name` varchar(60) NOT NULL,
-  `leagues_won` int(11) NOT NULL DEFAULT '0',
+  `leagues_won` varchar(60) NOT NULL DEFAULT 'Not Yet Won',
   `captain` varchar(60) NOT NULL,
   `home` varchar(60) NOT NULL,
   `venue` varchar(60) NOT NULL,
@@ -48,14 +48,14 @@ CREATE TABLE IF NOT EXISTS `teams` (
 --
 
 INSERT INTO `teams` (`pid_teams`, `name`, `leagues_won`, `captain`, `home`, `venue`) VALUES
-(1, 'Mumbai Indians', 3, 'Rohit Sharma', 'Mumbai', 'Wankhede Stadium'),
-(2, 'Chennai Super Kings', 2, 'Mahendra Singh Dhoni', 'Chennai', 'M. A. Chidambaram Stadium'),
-(3, 'Royal Challengers Bangalore', 0, 'Virat Kohli', 'Bengaluru', 'M. Chinnaswamy Stadium'),
-(4, 'Kolkata Knight Riders', 2, 'Dinesh Karthik', 'Kolkata', 'Eden Gardens'),
-(5, 'Sunrisers Hyderabad', 1, 'Shikhar Dhawan', 'Hyderabad', 'Rajiv Gandhi Intl Cricket Stadium'),
-(6, 'Rajasthan Royals', 1, 'Steven Smith', 'Jaipur', 'Sawai Mansingh Stadium'),
-(7, 'Kings XI Punjab', 0, 'Ravichandran Ashwin', 'Mohali', 'IS Bindra Stadium'),
-(8, 'Delhi Daredevils', 0, 'Gautam Gambhir', 'Delhi', 'Feroz Shah Kotla Stadium');
+(1, 'Mumbai Indians', '2013, 2015, 2017', 'Rohit Sharma', 'Mumbai', 'Wankhede Stadium'),
+(2, 'Chennai Super Kings', '2010, 2011', 'Mahendra Singh Dhoni', 'Chennai', 'M. A. Chidambaram Stadium'),
+(3, 'Royal Challengers Bangalore', 'Not Yet Won ', 'Virat Kohli', 'Bengaluru', 'M. Chinnaswamy Stadium'),
+(4, 'Kolkata Knight Riders', '2012, 2014', 'Dinesh Karthik', 'Kolkata', 'Eden Gardens'),
+(5, 'Sunrisers Hyderabad', '2016', 'Shikhar Dhawan', 'Hyderabad', 'Rajiv Gandhi Intl Cricket Stadium'),
+(6, 'Rajasthan Royals', '2008', 'Steven Smith', 'Jaipur', 'Sawai Mansingh Stadium'),
+(7, 'Kings XI Punjab', 'Not Yet Won ', 'Ravichandran Ashwin', 'Mohali', 'IS Bindra Stadium'),
+(8, 'Delhi Daredevils', 'Not Yet Won ', 'Gautam Gambhir', 'Delhi', 'Feroz Shah Kotla Stadium');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
