@@ -67,7 +67,7 @@
 						</tr>
 					</thead>
 					<tr>
-						<td><?php echo $plinfo[$count]['name'] ?></td>
+						<td><b><?php echo $plinfo[$count]['name'];?></b> <?php echo " (C)"; ?></td>
 						<td><?php echo $pltype[$count]; ?></td>
 						<td><?php echo $plinfo[$count]['runs'] ?></td>
 						<td><?php echo $plinfo[$count]['wickets'] ?></td>
