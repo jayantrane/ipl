@@ -1,5 +1,5 @@
 *{
-	color: #1576b9;
+	color: #000;
 }
 .menu12{
 	color: white;
@@ -37,12 +37,25 @@ body{
 	background: #fff;
 }
 
-td{
-	text-align: center;
-	vertical-align: middle;
-}
-
 .name{
 	text-align: left;
+	text: #000;
+}
+
+thead th {
+  background: rgb(100,100,200);
+  color: #FFF;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+th,td{
+	 font-family: Arial, Helvetica, sans-serif;
+	 text-align: center;
+	 color: #000;
 }
 

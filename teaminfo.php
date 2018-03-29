@@ -39,6 +39,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/mynavigation.css">
+    
     <link type="text/css" rel="stylesheet" href="css/teams.css">
 	<title>IPL</title>
 </head>

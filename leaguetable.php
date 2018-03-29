@@ -50,11 +50,12 @@ for($i=1;$i<9;$i++){
 
 		    <div class="col-md-10 main">
 
-				<div class="table-responsive">
+				
 
 					<table class="table table-bordered table-striped table-hover table-container">
 
 						<tr>
+						<thead>
 							<th>Position</th>
 							<th>Name</th>
 							<th>MatchesPlayed</th>
@@ -62,6 +63,7 @@ for($i=1;$i<9;$i++){
 							<th>Losses</th>
 							<th>Draws</th>
 							<th>Points</th>
+						</thead>
 						</tr>
 
 						<tr >
@@ -144,7 +146,7 @@ for($i=1;$i<9;$i++){
 							<td><?= $values[8][6] ?></td>
 						</tr>
 					</table>
-				</div>
+				
 			</div>
 		</div>
 	</div>
