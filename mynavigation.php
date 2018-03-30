@@ -35,7 +35,7 @@
           <ul class="nav nav-sidebar ">
             <li <?php if($_SESSION['onpage'] == 'home'){?> class="active" <?php } ?> ><a href="home.php">Home</a></li>
             <li <?php if($_SESSION['onpage'] == 'leaguetable'){?> class="active" <?php } ?> ><a href="leaguetable.php">Points Table</a></li>
-            <li <?php if($_SESSION['onpage'] == 'schedule'){?> class="active" <?php } ?> ><a href="">Schedule</a></li>
+            <li <?php if($_SESSION['onpage'] == 'schedule'){?> class="active" <?php } ?> ><a href="schedule.php">Schedule</a></li>
             <li <?php if($_SESSION['onpage'] == 'players'){?> class="active" <?php } ?> ><a href="stats.php">Player Stats</a></li>
             <li <?php if($_SESSION['onpage'] == 'teams'){?> class="active" <?php } ?> ><a href="teams.php">Teams</a></li>
             <li <?php if($_SESSION['onpage'] == 'aboutus'){?> class="active" <?php } ?> ><a href="">About Us</a></li>
