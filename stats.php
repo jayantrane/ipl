@@ -98,7 +98,6 @@ $_SESSION['onpage']="stats";
 
 		<tr>
 			<thead>
-				<th>Id</th>
 				<th>Name</th>
 				<th>Team</th>
 				<th>Type</th>
@@ -108,7 +107,6 @@ $_SESSION['onpage']="stats";
 		</tr>
 
 		<tr>
-			<td><?= $values[0] ?></td>
 			<td><?= $values[1] ?></td>
 			<td><?php $image="css/images/".$values[2].".png" ?><img src="<?php echo $image ?>" class="miimage"><span class="tab"><?= $teams[$values[2]] ?></span></td>
 			<td><?= $types[$values[3]] ?></td>
@@ -124,7 +122,6 @@ $_SESSION['onpage']="stats";
 
 		<tr>
 			<thead>
-				<th>Id</th>
 				<th>Name</th>
 				<th>Team</th>
 				<th>Type</th>
@@ -135,7 +132,6 @@ $_SESSION['onpage']="stats";
 
 		<?php for($i=0;$i<$num;$i++){ ?>
 			<tr>
-				<td><?= $values[$i][0] ?></td>
 				<td><?= $values[$i][1] ?></td>
 				<td><?php $image="css/images/".$values[$i][2].".png" ?><img src="<?php echo $image ?>" class="miimage"><span class="tab"><?= $teams[$values[$i][2]] ?></span></td>
 				<td><?= $types[$values[$i][3]] ?></td>
