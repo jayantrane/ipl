@@ -41,26 +41,12 @@ $_SESSION['onpage']='aboutus';
 				</div>
 
 				<div class="row">
-					<h3>Pratik Prabhu</h3><br>Mobile No:7715903424<br>Email:prabhupratik28@gmail.com
-				</div>
-
-				<div class="row">
 					<h3>Siddhesh Patel</h3><br>Mobile No:8369480455<br>Email:siddheshpatel2000@gmail.com
 				</div>
-
-<<<<<<< HEAD
-			<div class="row">
-				<h3>Siddhesh Patel</h3><br>Mobile No:8369480455<br>Email:siddheshpatel2000@gmail.com
-			</div>
 
 			<div class="row">
 				<h3>Onkar Bangar</h3><br>Mobile No:9689050769<br>Email:onkarbangarpm@gmail.com
 			</div>
-=======
-				<div class="row">
-					<h3>Onkar Bangar</h3><br>Mobile No:9689050769<br>Email:onkarbangarpm@gmail.com
-				</div>
->>>>>>> a030754c2f6da08bc8557a4cc366074a4aa30573
 
 		</div>
 
