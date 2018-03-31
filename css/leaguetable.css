@@ -1,15 +1,19 @@
 *{
 	color: #000;
 }
+
 .menu12{
 	color: white;
 }
+
 .glyphicon-log-in{
 	color: white;
 }
+
 .glyphicon-log-out{
 	color: white;
 }
+
 body{
 	background: url(images/login1.jpg) no-repeat center center fixed; 
  	 -webkit-background-size: cover;

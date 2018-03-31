@@ -21,6 +21,9 @@ $_SESSION['onpage']="players";
     <link rel="stylesheet" href="css/mynavigation.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/stats.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 	<title>IPL</title>
 </head>
 
