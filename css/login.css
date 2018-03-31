@@ -19,7 +19,7 @@ body{
 	box-shadow: -12px 7px 16px 9px rgba(0,0,0,0.75);
 }
 
-/*a:link{
+a:link{
 	color: white;
 }
 
@@ -31,4 +31,6 @@ a:hover{
 	color: #f949ee;
 }
 
-*/
+.menu12{
+	margin-top: 50px;
+}
