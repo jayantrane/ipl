@@ -1,0 +1,19 @@
+.main{
+	margin-top: 70px;
+	margin-left: 50px;
+}
+
+.card-img-top {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    width: 18rem;
+    height: 15rem;
+    
+}
+
+.team-name{
+	color: #fff;
+}
+.vstext{
+	color: #fff;
+}
