@@ -1,6 +1,18 @@
 <?php 
 session_start();
 ?>
+
+<script type="text/javascript">
+	function myFunction() {
+    var x = document.getElementById("exampleInputPassword");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+	}
+</script>
+
 <!DOCTYPE html>
 
 <html>
@@ -51,6 +63,8 @@ session_start();
 						<br>
 						<center><a href="forgot.php" class="help-block">Forgot Password</a></center>
 					</div>
+
+					<input type="checkbox" onclick="myFunction()">Show Password
 
 					<div class="checkbox">
 						<label>
