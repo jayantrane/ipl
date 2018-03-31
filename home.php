@@ -61,7 +61,7 @@ $image2="css/images/".array_search(strtolower($values1[3]),array_map('strtolower
           
           <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card text-center">
                   <img class="card-img-top" src="<?php echo $image ?>">
                   <div class="card-body">
@@ -70,9 +70,7 @@ $image2="css/images/".array_search(strtolower($values1[3]),array_map('strtolower
               </div>
             </div>
 
-            <div class="col-md-1"></div>
-
-            <div class="col-md-6">
+            <div class="col-md-8">
               <div class="card text-center">
                   <img class="card-img-top" src="<?php echo $image1 ?>" > <b class="vstext">v/s</b> 
                   <img class="card-img-top" src="<?php echo $image2 ?>" >
