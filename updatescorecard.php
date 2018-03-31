@@ -50,4 +50,6 @@
 
     mysqli_query($ipldb,$query);
 
+    header('Refresh :2 ;URL:showscorecard.php?id='.$id);
+
 ?>

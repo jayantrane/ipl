@@ -2,12 +2,6 @@
 	session_start();
 	$_SESSION['onpage']="schedule";
 	$id = $_GET['id'];
-	$status = $_GET['status'];
-
-	if ($status == '1') {
-		echo "hi";
-		header('Refresh: 2; URL = home.php?id='.$id);
-	}
 
 	$ipldb = new mysqli("localhost", "root", "", "ipldb");
 
