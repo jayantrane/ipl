@@ -35,13 +35,21 @@ $_SESSION['onpage']="players";
 			<div class="search-bar">
 				<form action="#" method="post">
 					<!--<label>Search by Name:</label>-->
-					<input type="text" placeholder="Search by name" name="byname" autocomplete="off">
-					<button type="submit" name="action" value="bynamebutton"><i class="fa fa-search"></i></button><br><br>
+					<div class="search-bar-1">
+						<div class="col-md-6 " style="text-align: right; margin-top: 5vw; margin-bottom: 3vw;">
+							<input type="text" placeholder="Search by name" name="byname" autocomplete="off">
+						</div>
+						<div class="col-md-6" style="text-align: left; margin-top: 5vw; margin-bottom: 3vw;">
+							<button type="submit" name="action" value="bynamebutton"><i class="fa fa-search"></i></button>
+						</div>
+					</div>
 					<!--<label>Search by Team:</label>-->
-					<input type="text" placeholder="Search by team" name="byteam" autocomplete="off">
-					<input type="text" placeholder="Player type" name="ptype" autocomplete="off">
-					<input type="text" placeholder="Sort by" name="sorttype" autocomplete="off">
-					<button type="submit" name="action" value="byteambutton"><i class="fa fa-search"></i></button>
+					<div class="search-bar-3">
+						<input type="text" placeholder="Search by team" name="byteam" autocomplete="off">
+						<input type="text" placeholder="Player type" name="ptype" autocomplete="off">
+						<input type="text" placeholder="Sort by" name="sorttype" autocomplete="off">
+						<button type="submit" name="action" value="byteambutton"><i class="fa fa-search"></i></button>
+					</div>
 				</form>
 			</div>
 
