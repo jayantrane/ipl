@@ -24,26 +24,31 @@ $_SESSION['onpage']='aboutus';
 </head>
 
 <body>
+<!-- always include one </div> elements before </body> -->
+    <?php include 'mynavigation.php';?>
+    		<div id='content' class="col-md-10 main">
 
-	 <?php include 'mynavigation.php';?>
+				<div class="row">
+					<h1><b><u>ABOUT US</u></b></h1>
+				</div>
 
-	 
-	<div class="main">
-		
-		<div class="col-md-10">
+				<div class="row">
+					<h3>Jayant Rane</h3><br>Mobile No:7021420544<br>Email:jayantrane812@gmail.com
+				</div>
 
-			<div class="row">
-				<h1><b><u>ABOUT US</u></b></h1>
-			</div>
+				<div class="row">
+					<h3>Pratik Prabhu</h3><br>Mobile No:7715903424<br>Email:prabhupratik28@gmail.com
+				</div>
 
-			<div class="row">
-				<h3>Jayant Rane</h3><br>Mobile No:7021420544<br>Email:jayantrane812@gmail.com
-			</div>
+				<div class="row">
+					<h3>Pratik Prabhu</h3><br>Mobile No:7715903424<br>Email:prabhupratik28@gmail.com
+				</div>
 
-			<div class="row">
-				<h3>Pratik Prabhu</h3><br>Mobile No:7715903424<br>Email:prabhupratik28@gmail.com
-			</div>
+				<div class="row">
+					<h3>Siddhesh Patel</h3><br>Mobile No:8369480455<br>Email:siddheshpatel2000@gmail.com
+				</div>
 
+<<<<<<< HEAD
 			<div class="row">
 				<h3>Siddhesh Patel</h3><br>Mobile No:8369480455<br>Email:siddheshpatel2000@gmail.com
 			</div>
@@ -51,6 +56,11 @@ $_SESSION['onpage']='aboutus';
 			<div class="row">
 				<h3>Onkar Bangar</h3><br>Mobile No:9689050769<br>Email:onkarbangarpm@gmail.com
 			</div>
+=======
+				<div class="row">
+					<h3>Onkar Bangar</h3><br>Mobile No:9689050769<br>Email:onkarbangarpm@gmail.com
+				</div>
+>>>>>>> a030754c2f6da08bc8557a4cc366074a4aa30573
 
 		</div>
 

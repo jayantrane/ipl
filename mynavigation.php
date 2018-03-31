@@ -25,9 +25,7 @@
 </div><!--/.navbar -->
 
 
-
-<div class="container-fluid">
-  <div class="row">
+<div class='wrapper'>
     <div id="sidebar" class="sidebar navbar-left col-md-2">
       <div class="menu12">
           <h3>Menu</h3>
@@ -40,7 +38,8 @@
             <li <?php if($_SESSION['onpage'] == 'teams'){?> class="active" <?php } ?> ><a href="teams.php">Teams</a></li>
             <li <?php if($_SESSION['onpage'] == 'aboutus'){?> class="active" <?php } ?> ><a href="aboutus.php">About Us</a></li>
           </ul>
-      </div>
+    </div>
+  
 
 
     <!-- End of Navigation bars -->

@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-$_SESSION['onpage']="stats";
+$_SESSION['onpage']="players";
 
 ?>
 
@@ -12,7 +12,6 @@ $_SESSION['onpage']="stats";
 <head>
 	<meta name=viewport content="width=device-width, initial-scale=1"> 
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.css">
@@ -26,122 +25,127 @@ $_SESSION['onpage']="stats";
 </head>
 
 <body>
+<!-- always include one </div> elements before </body> -->
+    <?php include 'mynavigation.php';?>
+    		<div id='content' class="col-md-10 main">
 
-	<?php include 'mynavigation.php'; ?>
+			<div class="search-bar">
+				<form action="#" method="post">
+					<!--<label>Search by Name:</label>-->
+					<input type="text" placeholder="Search by name" name="byname" autocomplete="off">
+					<button type="submit" name="action" value="bynamebutton"><i class="fa fa-search"></i></button><br><br>
+					<!--<label>Search by Team:</label>-->
+					<input type="text" placeholder="Search by team" name="byteam" autocomplete="off">
+					<input type="text" placeholder="Player type" name="ptype" autocomplete="off">
+					<input type="text" placeholder="Sort by" name="sorttype" autocomplete="off">
+					<button type="submit" name="action" value="byteambutton"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
 
-	<div class="search-bar">
-		<form action="#" method="post">
-			<!--<label>Search by Name:</label>-->
-			<input type="text" placeholder="Search by name" name="byname" autocomplete="off">
-			<button type="submit" name="action" value="bynamebutton"><i class="fa fa-search"></i></button><br><br>
-			<!--<label>Search by Team:</label>-->
-			<input type="text" placeholder="Search by team" name="byteam" autocomplete="off">
-			<input type="text" placeholder="Player type" name="ptype" autocomplete="off">
-			<input type="text" placeholder="Sort by" name="sorttype" autocomplete="off">
-			<button type="submit" name="action" value="byteambutton"><i class="fa fa-search"></i></button>
-		</form>
-	</div>
+			<?php 
+				$mysqli=mysqli_connect("localhost","root","","ipldb");
+				$touch=0;
 
-	<?php 
-		$mysqli=mysqli_connect("localhost","root","","ipldb");
-		$touch=0;
+				$types=array("","Batsman","All-Rounder","Bowler");
 
-		$types=array("","Batsman","All-Rounder","Bowler");
+				$teams=array("","Mumbai Indians","Chennai Super Kings","Royal Challengers Banglore","Kolkata Knight Riders","Sunrisers Hyderabad","Rajasthan Royals","Kings XI Punjab","Delhi Daredevils");
 
-		$teams=array("","Mumbai Indians","Chennai Super Kings","Royal Challengers Banglore","Kolkata Knight Riders","Sunrisers Hyderabad","Rajasthan Royals","Kings XI Punjab","Delhi Daredevils");
+				if(!empty($_POST['byname'])){
+					if($_POST['action']=='bynamebutton')
+					{
+						$name=$_POST['byname'];
 
-		if(!empty($_POST['byname'])){
-			if($_POST['action']=='bynamebutton')
-			{
-				$name=$_POST['byname'];
+						$sql="select * from players where name='".$name."' ";
 
-				$sql="select * from players where name='".$name."' ";
+						$result=mysqli_query($mysqli,$sql);
 
-				$result=mysqli_query($mysqli,$sql);
-
-				if(mysqli_num_rows($result)>0){
-					$touch=1;
-					$values=mysqli_fetch_array($result,MYSQLI_NUM);
-				}
-			}
-		}
-		elseif(!empty($_POST['byteam']) and !empty($_POST['ptype']) and !empty($_POST['sorttype'])){
-			if($_POST['action']=='byteambutton'){
-				$team=array_search(strtolower($_POST['byteam']),array_map('strtolower', $teams));
-				$type=array_search(strtolower($_POST['ptype']),array_map('strtolower',  $types));
-				$sort=$_POST['sorttype'];
-
-				$sql="select * from players where fid_team=$team and type=$type order by $sort ";
-
-				$values=array();
-
-				$result=mysqli_query($mysqli,$sql);
-
-				$num=mysqli_num_rows($result);
-
-				if($num>0){
-					$touch=2;
-					while($row=mysqli_fetch_array($result,MYSQLI_NUM)){
-						$values[]=$row;
+						if(mysqli_num_rows($result)>0){
+							$touch=1;
+							$values=mysqli_fetch_array($result,MYSQLI_NUM);
+						}
 					}
 				}
-			}
-		}
-		
-	?>
+				elseif(!empty($_POST['byteam']) and !empty($_POST['ptype']) and !empty($_POST['sorttype'])){
+					if($_POST['action']=='byteambutton'){
+						$team=array_search(strtolower($_POST['byteam']),array_map('strtolower', $teams));
+						$type=array_search(strtolower($_POST['ptype']),array_map('strtolower',  $types));
+						$sort=$_POST['sorttype'];
 
-	<div class="col-md-10 main">
+						$sql="select * from players where fid_team=$team and type=$type order by $sort ";
 
-	<?php if($touch==1){ ?>
+						$values=array();
 
-	<table class="table table-bordered table-striped table-hover">
+						$result=mysqli_query($mysqli,$sql);
 
-		<tr>
-			<thead>
-				<th>Name</th>
-				<th>Team</th>
-				<th>Type</th>
-				<th>Runs</th>
-				<th>Wickets</th>
-			</thead>
-		</tr>
+						$num=mysqli_num_rows($result);
 
-		<tr>
-			<td><?= $values[1] ?></td>
-			<td><?php $image="css/images/".$values[2].".png" ?><img src="<?php echo $image ?>" class="miimage"><span class="tab"><?= $teams[$values[2]] ?></span></td>
-			<td><?= $types[$values[3]] ?></td>
-			<td><?= $values[4] ?></td>
-			<td><?= $values[5] ?></td>
-		</tr>
-	</table>
+						if($num>0){
+							$touch=2;
+							while($row=mysqli_fetch_array($result,MYSQLI_NUM)){
+								$values[]=$row;
+							}
+						}
+					}
+				}
+				
+			?>
 
-	<?php } 
-	elseif($touch==2){ ?>
+			<div class="col-md-10 main">
 
-	<table class="table table-bordered table-hover">
+			<?php if($touch==1){ ?>
 
-		<tr>
-			<thead>
-				<th>Name</th>
-				<th>Team</th>
-				<th>Type</th>
-				<th>Runs</th>
-				<th>Wickets</th>
-			</thead>
-		</tr>
+				<table class="table table-bordered table-striped table-hover">
 
-		<?php for($i=0;$i<$num;$i++){ ?>
-			<tr>
-				<td><?= $values[$i][1] ?></td>
-				<td><?php $image="css/images/".$values[$i][2].".png" ?><img src="<?php echo $image ?>" class="miimage"><span class="tab"><?= $teams[$values[$i][2]] ?></span></td>
-				<td><?= $types[$values[$i][3]] ?></td>
-				<td><?= $values[$i][4] ?></td>
-				<td><?= $values[$i][5] ?></td>
-			</tr>
-		<?php }
+					<tr>
+						<thead>
+							<th>Name</th>
+							<th>Team</th>
+							<th>Type</th>
+							<th>Runs</th>
+							<th>Wickets</th>
+						</thead>
+					</tr>
 
-	} ?>
+					<tr>
+						<td><?= $values[1] ?></td>
+						<td><?php $image="css/images/".$values[2].".png" ?><img src="<?php echo $image ?>" class="miimage"><span class="tab"><?= $teams[$values[2]] ?></span></td>
+						<td><?= $types[$values[3]] ?></td>
+						<td><?= $values[4] ?></td>
+						<td><?= $values[5] ?></td>
+					</tr>
+				</table>
 
+			<?php } 
+			elseif($touch==2){ ?>
+
+				<table class="table table-bordered table-hover">
+
+					<tr>
+						<thead>
+							<th>Name</th>
+							<th>Team</th>
+							<th>Type</th>
+							<th>Runs</th>
+							<th>Wickets</th>
+						</thead>
+					</tr>
+
+					<?php for($i=0;$i<$num;$i++){ ?>
+						<tr>
+							<td><?= $values[$i][1] ?></td>
+							<td><?php $image="css/images/".$values[$i][2].".png" ?><img src="<?php echo $image ?>" class="miimage"><span class="tab"><?= $teams[$values[$i][2]] ?></span></td>
+							<td><?= $types[$values[$i][3]] ?></td>
+							<td><?= $values[$i][4] ?></td>
+							<td><?= $values[$i][5] ?></td>
+						</tr>
+					<?php }
+
+
+				} ?>
+				</table>
+
+			</div>
+		</div>
 	</div>
 
 </body>

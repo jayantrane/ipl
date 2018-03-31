@@ -34,11 +34,16 @@
 </head>
 
 <body>
-	<!-- always include two </div> elements before </body> -->
+	<!-- always include one </div> elements before </body> -->
     <?php include 'mynavigation.php';?>
-    		<div class="col-md-10 main">
+    		<div id='content' class="col-md-10 main">
     			<?php for($i=0; $i<mysqli_num_rows($result); $i++) { 
-    				$addr = "scorecard.php?id=".($i+1)."&status=".$schedule[$i]['status'];
+    				if($schedule[$i]['status'] == 0) {
+    					$addr = "scorecard.php?id=".($i+1);
+    				}
+    				else {
+    					$addr = "showscorecard.php?id=".($i+1);
+    				}
     				$id1=(string)array_search($schedule[$i]['fid_team1'], $teams);
     				$id2=(string)array_search($schedule[$i]['fid_team2'], $teams);
     			?>
@@ -77,9 +82,8 @@
 			  		</div>
 			  	<?php } ?>
     		</div>
-		</div>
 	</div>
-		
+
 </body>
 </html>
 

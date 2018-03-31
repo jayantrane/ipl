@@ -18,7 +18,6 @@ session_start();
 <html>
 
 <head>
-	<meta name=viewport content="width=device-width, initial-scale=1"> 
 	<!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.css">
     <!-- Bootstrap core CSS -->
@@ -34,9 +33,9 @@ session_start();
 <body>
 
 	
-	<!-- always include two </div> elements before </body> -->
-	<?php include 'mynavigation.php';?>
-    <div class="col-md-10 main">
+	<!-- always include one </div> elements before </body> -->
+    <?php include 'mynavigation.php';?>
+    		<div id='content' class="col-md-10 main">
 
 			<div class="col-md-4 col-sm-4 col-xs-12">
 			</div>
@@ -83,9 +82,6 @@ session_start();
 
 		</div>
 	</div>
-	</div>
-	</div>
-
 	</div>
 
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>

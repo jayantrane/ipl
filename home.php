@@ -21,16 +21,13 @@ $_SESSION['onpage'] = 'home';
 <body>
 
    
-    <!-- always include two </div> elements before </body> -->
-  <?php include 'mynavigation.php';?>
-     <!-- Start Your Code Here -->
-
-      <div id="main">
+  <!-- always include one </div> elements before </body> -->
+    <?php include 'mynavigation.php';?>
+        <div id='content' class="col-md-10 main">
 
 
-      </div>
+        </div>
     </div>
-  </div>
   
     <!-- SCRIPTS -->
     <!-- JQuery -->
@@ -39,6 +36,20 @@ $_SESSION['onpage'] = 'home';
     <script type="text/javascript" src="js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
 
 </body>
 </html>

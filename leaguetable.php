@@ -21,7 +21,6 @@ while($row=mysqli_fetch_array($result,MYSQLI_NUM)){
 <html>
 
 <head>
-	<meta name=viewport content="width=device-width, initial-scale=1"> 
 
 	<!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.css">
@@ -37,14 +36,11 @@ while($row=mysqli_fetch_array($result,MYSQLI_NUM)){
 
 <body>
 
-	<!-- always include two </div> elements before </body> -->
-	<?php include 'mynavigation.php';?>
+	<!-- always include one </div> elements before </body> -->
+    <?php include 'mynavigation.php';?>
+    		<div id='content' class="col-md-10 main">
 
-		    <div class="col-md-10 main">
-
-				
-
-					<table class="table table-bordered table-striped table-hover table-container">
+					<table class="table table-bordered table-striped table-hover">
 
 						<tr>
 						<thead>
@@ -140,7 +136,6 @@ while($row=mysqli_fetch_array($result,MYSQLI_NUM)){
 					</table>
 				
 			</div>
-		</div>
 	</div>
 
 

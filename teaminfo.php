@@ -32,7 +32,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name=viewport content="width=device-width, initial-scale=1"> 
 	<!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.css">
     <!-- Bootstrap core CSS -->
@@ -45,9 +44,9 @@
 </head>
 
 <body>
-	<!-- always include two </div> elements before </body> -->
+	<!-- always include one </div> elements before </body> -->
     <?php include 'mynavigation.php';?>
-    		<div class="col-md-10 main">
+    		<div id='content' class="col-md-10 main">
 				<div class="row">
 					<div class="card col-md-4 text-center"><img class="card-img-top-team" src="<?php echo $icon; ?>"></div>
 					<div class="card col-md-6 teaminfofont" style="margin-top: 4vh; margin-left: 2vh;">
@@ -145,7 +144,5 @@
 				</table>
 			</div>
 		</div>
-	</div>
-		
 </body>
 </html>
