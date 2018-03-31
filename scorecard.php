@@ -27,12 +27,17 @@
 
 	$team1 = array();
 	$team2 = array();
+	$t1score = array();
+	$t2score = array();
 
 	while($row=mysqli_fetch_array($result2,MYSQLI_ASSOC)){
 		$team1[]=$row;
+
+		$t1score[]=array('runs'=>'0','balls'=>'0','overs'=>'0','wickets'=>'0','runsconceded'=>'0');
 	}
 	while($row=mysqli_fetch_array($result3,MYSQLI_ASSOC)){
 		$team2[]=$row;
+		$t2score[]=array('runs'=>'0','balls'=>'0','overs'=>'0','wickets'=>'0','runsconceded'=>'0');
 	}
 
 
@@ -50,6 +55,7 @@
     <link rel="stylesheet" href="css/mynavigation.css">
     
     <link type="text/css" rel="stylesheet" href="css/schedule.css">
+    <link type="text/css" rel="stylesheet" href="css/scorecard.css">
 	<title>IPL</title>
 </head>
 
@@ -58,7 +64,7 @@
     <?php include 'mynavigation.php';?>
     		<div id='content' class="col-md-10 main">		
 				<div class="container">
-					<form action='/scorecard'>
+					<form class = "form" action = "updatescorecard.php" method = "post">
 					  <div class="row myrow">
 					  	<h1><?php echo $fid_team1; ?></h1>
 					    <table class="table myrow">
@@ -67,54 +73,107 @@
 					          <th class="col-md-3">Player Name</th>
 					          <th class="col-md-1">Runs</th>
 					          <th class="col-md-1">Balls</th>
-					          <th class="col-md-1">Sr Rate</th>
 					          <th class="col-md-1">Overs</th>
 					          <th class="col-md-1">Wickets</th>
 					          <th class="col-md-1">Runs Conceded</th>
-					          <th class="col-md-1">Economy</th>
 					        </tr>
 					      </thead>
 					      <tbody>
 					      	<?php for($i=0; $i<mysqli_num_rows($result2); $i++) { 
 			    				
 				    		?>
+				    			<div class = "form-group">
 							        <tr>
 							          <td>
 							            <p class="form-control-static"><?php echo $team1[$i]['name']; ?></p>
 							              
 							          </td>
 							          <td>
-							            <input type="number" class="form-control" size="4" value="0" >
+							          	<?php $str = "1".$i."1"; ?>
+							            <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
-							            <input type="number" class="form-control" size="4" value="0" >
+							          	<?php $str = "1".$i."2"; ?>
+ 										<input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
-							            <input type="number" class="form-control" size="4" value="0" >
+							          	<?php $str = "1".$i."3"; ?>
+							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
-							            <input type="number" class="form-control" size="4" value="0" >
+							          	<?php $str = "1".$i."4"; ?>
+							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
-							            <input type="number" class="form-control" size="4" value="0" >
-							          </td>
-							          <td>
-							            <input type="number" class="form-control" size="4" value="0" >
-							          </td>
-							          <td>
-							            <input type="number" class="form-control" size="4" value="0" >
+							          	<?php $str = "1".$i."5"; ?>
+							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          
 							        </tr>
+							    </div>
 					        <?php } ?>
 					      </tbody>
 					    </table>
+					  </div>
+
+
+					  <div class="row myrow">
+					  	<h1><?php echo $fid_team2; ?></h1>
+					    <table class="table myrow">
+					      <thead>
+					        <tr>
+					          <th class="col-md-3">Player Name</th>
+					          <th class="col-md-1">Runs</th>
+					          <th class="col-md-1">Balls</th>
+					          <th class="col-md-1">Overs</th>
+					          <th class="col-md-1">Wickets</th>
+					          <th class="col-md-1">Runs Conceded</th>
+					        </tr>
+					      </thead>
+					      <tbody>
+					      	<?php for($i=0; $i<mysqli_num_rows($result3); $i++) { 
+			    				
+				    		?>
+				    			<div class = "form-group">
+							        <tr>
+							          <td>
+							            <p class="form-control-static"><?php echo $team1[$i]['name']; ?></p>
+							              
+							          </td>
+							          <td>
+							          	<?php $str = "2".$i."1"; ?>
+							            <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							          </td>
+							          <td>
+							          	<?php $str = "2".$i."2"; ?>
+ 										<input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							          </td>
+							          <td>
+							          	<?php $str = "2".$i."3"; ?>
+							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							          </td>
+							          <td>
+							          	<?php $str = "2".$i."4"; ?>
+							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							          </td>
+							          <td>
+							          	<?php $str = "2".$i."5"; ?>
+							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							          </td>
+							          
+							        </tr>
+							    </div>
+					        <?php } ?>
+					      </tbody>
+					    </table>
+					  </div>
+					  <div class="col-md-12 text-center">
+					  		<input type="submit" class="btn btn-info" value="Submit Button">
 					  </div>
 					</form>
 				</div>
     		</div>
  		</div>
-		
 </body>
 </html>
 
