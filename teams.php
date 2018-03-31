@@ -19,9 +19,9 @@
 </head>
 
 <body>
-	<!-- always include two </div> elements before </body> -->
+	<!-- always include one </div> elements before </body> -->
     <?php include 'mynavigation.php';?>
-    		<div class="col-md-10 main">
+    		<div id='content' class="col-md-10 main">
     			<div class="row">
 		  			<div class="col-md-3">
 		  				<a href="teaminfo.php?id=1">
@@ -107,7 +107,6 @@
 			      	</div>
 		  		</div>
 			</div>
-		</div>
 	</div>
 </body>
 </html>
