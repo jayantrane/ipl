@@ -45,10 +45,6 @@ $_SESSION['onpage']='aboutus';
 			</div>
 
 			<div class="row">
-				<h3>Pratik Prabhu</h3><br>Mobile No:7715903424<br>Email:prabhupratik28@gmail.com
-			</div>
-
-			<div class="row">
 				<h3>Siddhesh Patel</h3><br>Mobile No:8369480455<br>Email:siddheshpatel2000@gmail.com
 			</div>
 
