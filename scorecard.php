@@ -4,8 +4,9 @@
 	$id = $_GET['id'];
 	$status = $_GET['status'];
 
-	if ($status == 1) {
-		header('Location : /scorecard.php?id='.$id);
+	if ($status == '1') {
+		echo "hi";
+		header('Refresh: 2; URL = home.php?id='.$id);
 	}
 
 	$ipldb = new mysqli("localhost", "root", "", "ipldb");
@@ -19,11 +20,16 @@
 		$fid_team2=$row['fid_team2'];
 	}
 	echo $fid_team1." ".$fid_team2;
+
 	$query2="SELECT name FROM players where fid_team = (select pid_teams from teams where name = '$fid_team1')";
 	$query3="SELECT name FROM players where fid_team = (select pid_teams from teams where name = '$fid_team2')";
+	$query4="(select pid_teams from teams where name = '$fid_team1')";
+	$query5="(select pid_teams from teams where name = '$fid_team2')";
 
 	$result2=mysqli_query($ipldb,$query2);
 	$result3=mysqli_query($ipldb,$query3);
+	$result4=mysqli_query($ipldb,$query4);
+	$result5=mysqli_query($ipldb,$query5);
 
 	$team1 = array();
 	$team2 = array();
@@ -32,14 +38,19 @@
 
 	while($row=mysqli_fetch_array($result2,MYSQLI_ASSOC)){
 		$team1[]=$row;
-
 		$t1score[]=array('runs'=>'0','balls'=>'0','overs'=>'0','wickets'=>'0','runsconceded'=>'0');
 	}
 	while($row=mysqli_fetch_array($result3,MYSQLI_ASSOC)){
 		$team2[]=$row;
 		$t2score[]=array('runs'=>'0','balls'=>'0','overs'=>'0','wickets'=>'0','runsconceded'=>'0');
 	}
-
+	while($row=mysqli_fetch_array($result4,MYSQLI_ASSOC)){
+		$team1id=$row['pid_teams'];
+	}
+	while($row=mysqli_fetch_array($result5,MYSQLI_ASSOC)){
+		$team2id=$row['pid_teams'];
+	}
+	echo $team1id." ".$team2id;
 
 ?>
 
@@ -167,6 +178,9 @@
 					      </tbody>
 					    </table>
 					  </div>
+					  <input type="hidden" class="form-control" size="4" name="team1id" value="<?php echo htmlspecialchars($team1id); ?>">
+					  <input type="hidden" class="form-control" size="4" name="team2id" value="<?php echo htmlspecialchars($team2id); ?>">
+					  <input type="hidden" class="form-control" size="4" name="id" value="<?php echo htmlspecialchars($id); ?>">
 					  <div class="col-md-12 text-center">
 					  		<input type="submit" class="btn btn-info" value="Submit Button">
 					  </div>
