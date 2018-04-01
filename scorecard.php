@@ -13,7 +13,7 @@
 		$fid_team1=$row['fid_team1'];
 		$fid_team2=$row['fid_team2'];
 	}
-	echo $fid_team1." ".$fid_team2;
+	#echo $fid_team1." ".$fid_team2;
 
 	$query2="SELECT name FROM players where fid_team = (select pid_teams from teams where name = '$fid_team1')";
 	$query3="SELECT name FROM players where fid_team = (select pid_teams from teams where name = '$fid_team2')";
@@ -44,7 +44,7 @@
 	while($row=mysqli_fetch_array($result5,MYSQLI_ASSOC)){
 		$team2id=$row['pid_teams'];
 	}
-	echo $team1id." ".$team2id;
+	#echo $team1id." ".$team2id;
 
 ?>
 
@@ -219,7 +219,7 @@
 					  <input type="hidden" class="form-control" size="4" name="team2id" value="<?php echo htmlspecialchars($team2id); ?>">
 					  <input type="hidden" class="form-control" size="4" name="id" value="<?php echo htmlspecialchars($id); ?>">
 					  <div class="col-md-12 text-center">
-					  		<input type="submit" class="btn btn-info" value="Submit Button">
+					  		<input type="submit" class="btn btn-info" value="Submit Scorecard">
 					  </div>
 					</form>
 				</div>
