@@ -71,7 +71,7 @@ $image2="css/images/".array_search(strtolower($values1[3]),array_map('strtolower
             </div>
 
             <div class="col-md-8">
-              <div class="card text-center">
+              <div class="card text-center cd">
                   <img class="card-img-top" src="<?php echo $image1 ?>" > <b class="vstext">v/s</b> 
                   <img class="card-img-top" src="<?php echo $image2 ?>" >
                   <div class="card-body">
@@ -80,6 +80,92 @@ $image2="css/images/".array_search(strtolower($values1[3]),array_map('strtolower
                     <h5 class="card-title team-name"><?= $values1[4] ?>
                     <h5 class="card-title team-name"><?= $status[$values1[5]] ?>
                   </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-5 cd">
+              <div class="card text-center">
+                <iframe src="https://www.youtube.com/embed/1zfSKRqh1Vs" width="420" height="315"></iframe>
+                <div class="card-body">
+                  <h5 class="card-title team-name">Probable Playing XI of MI
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-5 cd">
+              <div class="card text-center">
+                <iframe src="https://www.youtube.com/embed/igSHFeysDXo" width="400" height="315"></iframe>
+                <div class="card-body">
+                  <h5 class="card-title team-name">Probable Playing XI of CSK
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-5 cd">
+              <div class="card text-center">
+                <iframe src="https://www.youtube.com/embed/aIjpJPDCIaI" width="420" height="315"></iframe>
+                <div class="card-body">
+                  <h5 class="card-title team-name">Probable Playing XI of RCB
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-5 cd">
+              <div class="card text-center">
+                <iframe src="https://www.youtube.com/embed/fz7w_K0akxk" width="400" height="315"></iframe>
+                <div class="card-body">
+                  <h5 class="card-title team-name">Probable Playing XI of KKR
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+            <div class="col-md-5 cd">
+              <div class="card text-center">
+                <iframe src="https://www.youtube.com/embed/" width="420" height="315"></iframe>
+                <div class="card-body">
+                  <h5 class="card-title team-name">Probable Playing XI of SRH
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-5 cd">
+              <div class="card text-center">
+                <iframe src="https://www.youtube.com/embed/vPGkqGszzGs" width="400" height="315"></iframe>
+                <div class="card-body">
+                  <h5 class="card-title team-name">Probable Playing XI of RR
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-5 cd">
+              <div class="card text-center">
+                <iframe src="https://www.youtube.com/embed/asOKH8_8Eac" width="420" height="315"></iframe>
+                <div class="card-body">
+                  <h5 class="card-title team-name">Probable Playing XI of KXIP
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-5 cd">
+              <div class="card text-center">
+                <iframe src="https://www.youtube.com/embed/isZA9PeTrWg" width="400" height="315"></iframe>
+                <div class="card-body">
+                  <h5 class="card-title team-name">Probable Playing XI of DD
+                </div>
               </div>
             </div>
 

@@ -40,7 +40,7 @@ while($row=mysqli_fetch_array($result,MYSQLI_NUM)){
     <?php include 'mynavigation.php';?>
     		<div id='content' class="col-md-10 main">
 
-					<table class="table table-bordered table-striped table-hover">
+					<table class="table table-bordered table-hover">
 
 						<tr>
 						<thead>
