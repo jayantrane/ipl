@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 $_SESSION['onpage']="players";
 
@@ -11,7 +10,27 @@ $_SESSION['onpage']="players";
 
 <head>
 	<meta name=viewport content="width=device-width, initial-scale=1"> 
-
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/typeahead.js"></script>
+	<script>
+    $(document).ready(function () {
+        $('#txtPlayer').typeahead({
+            source: function (query, result) {
+                $.ajax({
+                    url: "search.php",
+					data: 'query=' + query,            
+                    dataType: "json",
+                    type: "POST",
+                    success: function (data) {
+						result($.map(data, function (item) {
+							return item;
+                        }));
+                    }
+               		});
+           		}
+        	});
+    	});
+	</script>
 
 	<!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.css">
@@ -36,20 +55,23 @@ $_SESSION['onpage']="players";
 			<div class="search-bar">
 				<form action="#" method="post">
 					<!--<label>Search by Name:</label>-->
-					<div class="search-bar-1">
-						<div class="col-md-6 " style="text-align: right; margin-top: 5vw; margin-bottom: 3vw;">
-							<input type="text" placeholder="Search by name" name="byname" autocomplete="off">
-						</div>
-						<div class="col-md-6" style="text-align: left; margin-top: 5vw; margin-bottom: 3vw;">
-							<button type="submit" name="action" value="bynamebutton"><i class="fa fa-search"></i></button>
+					
+					<div class="col-md-6 " >
+							
+						<div class="bgcolor">
+							<label class="demo-label">Search Player:</label><br/> 
+							<input type="text" placeholder="Player Name" name="byname" id="txtPlayer" class="typeahead" autocomplete="off">
+							<button type="submit" name="action" value="bynamebutton" class="btn btn-info"><span class="glyphicon glyphicon-search"></span>Search</button>
+							
 						</div>
 					</div>
-					<!--<label>Search by Team:</label>-->
-					<div class="search-bar-3">
-						<input type="text" placeholder="Search by team" name="byteam" autocomplete="off">
-						<input type="text" placeholder="Player type" name="ptype" autocomplete="off">
-						<input type="text" placeholder="Sort by" name="sorttype" autocomplete="off">
-						<button type="submit" name="action" value="byteambutton"><i class="fa fa-search"></i></button>
+					<!--<label>Search by Team:</label>-->s
+					<div class="col-md-6 bgcolor">
+						<label class="demo-label">Search Player by team:</label><br/> 
+						<input type="text" placeholder="Team Name" name="byteam" class="myhead" autocomplete="off">
+						<input type="text" placeholder="Player type" name="ptype" class="myhead" autocomplete="off">
+						<input type="text" placeholder="Sort by" name="sorttype" class="myhead" autocomplete="off">
+						<button type="submit" name="action" value="byteambutton" class="btn btn-info"><span class="glyphicon glyphicon-search"></span>Search</button>
 					</div>
 				</form>
 			</div>
