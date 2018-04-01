@@ -174,6 +174,47 @@
 					      </tbody>
 					    </table>
 					  </div>
+
+
+
+					  <div class="row myrow">
+					  	<h1>Result</h1>
+					    <table class="table myrow">
+					      <thead>
+					        <tr>
+					            <th colspan="2"><?php echo $fid_team1; ?></th>
+					            <th colspan="2"><?php echo $fid_team2; ?></th>
+					        </tr>
+					        <tr>
+					            <th>Runs</th>
+					            <th>Wickets</th>
+					            <th>Runs</th>
+					            <th>Wickets</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					        <tr>
+					            <td>
+					            	<input type="number" class="form-control" size="4" name="team1runs">
+					            </td>
+					            <td>
+					            	<input type="number" class="form-control" size="4" name="team1wickets">
+					            </td>
+					            <td>
+					            	<input type="number" class="form-control" size="4" name="team2runs">
+					            </td>
+					            <td>
+					            	<input type="number" class="form-control" size="4" name="team2wickets">
+					            </td>
+					        </tr>
+					    </tbody>
+					      </tbody>
+					    </table>
+					  </div>
+
+
+
+
 					  <input type="hidden" class="form-control" size="4" name="team1id" value="<?php echo htmlspecialchars($team1id); ?>">
 					  <input type="hidden" class="form-control" size="4" name="team2id" value="<?php echo htmlspecialchars($team2id); ?>">
 					  <input type="hidden" class="form-control" size="4" name="id" value="<?php echo htmlspecialchars($id); ?>">

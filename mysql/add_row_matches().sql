@@ -1,5 +1,5 @@
-delimiter //
-CREATE DEFINER=`root`@`localhost` PROCEDURE `add_row`(IN `fid1` INT, IN `fid2` INT, IN `incr` INT)
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `add_row_teams`(IN `fid1` INT, IN `fid2` INT, IN `incr` INT)
     MODIFIES SQL DATA
 BEGIN
 	INSERT INTO matches(fid_team1,venue) 
@@ -11,5 +11,5 @@ BEGIN
     ELSEIF incr=2 THEN SET @maxdate := ADDTIME((SELECT MAX(matchdate) FROM matches), '04:00:00');
     END IF;
     UPDATE matches SET matchdate=@maxdate WHERE pid_matches=@maxid;   
-END
-//
+END$$
+DELIMITER ;
