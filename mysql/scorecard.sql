@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 24, 2018 at 02:17 PM
+-- Generation Time: Apr 01, 2018 at 12:47 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -32,15 +32,27 @@ DROP TABLE IF EXISTS `scorecard`;
 CREATE TABLE IF NOT EXISTS `scorecard` (
   `playerid` int(11) NOT NULL,
   `matchid` int(11) NOT NULL,
-  `runs` int(11) DEFAULT NULL,
-  `balls` int(11) DEFAULT NULL,
-  `strikerate` decimal(10,4) DEFAULT NULL,
-  `overs` float DEFAULT NULL,
-  `wickets` int(11) DEFAULT NULL,
-  `runsconceded` int(11) DEFAULT NULL,
-  `economy` decimal(10,4) DEFAULT NULL,
+  `runs` int(11) DEFAULT '0',
+  `balls` int(11) DEFAULT '0',
+  `strikerate` decimal(10,4) DEFAULT '0.0000',
+  `overs` float DEFAULT '0',
+  `wickets` int(11) DEFAULT '0',
+  `runsconceded` int(11) DEFAULT '0',
+  `economy` decimal(10,4) DEFAULT '0.0000',
   PRIMARY KEY (`playerid`,`matchid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Triggers `scorecard`
+--
+DROP TRIGGER IF EXISTS `tig_bef_ins_scorecard`;
+DELIMITER $$
+CREATE TRIGGER `tig_bef_ins_scorecard` AFTER INSERT ON `scorecard` FOR EACH ROW begin
+	update players set runs=runs+new.runs where new.playerid=id_player;
+    update players set wickets=wickets+new.wickets where new.playerid=id_player;
+end
+$$
+DELIMITER ;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
