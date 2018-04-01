@@ -65,7 +65,7 @@ $_SESSION['onpage']="players";
 							
 						</div>
 					</div>
-					<!--<label>Search by Team:</label>-->s
+					<!--<label>Search by Team:</label>-->
 					<div class="col-md-6 bgcolor">
 						<label class="demo-label">Search Player by team:</label><br/> 
 						<input type="text" placeholder="Team Name" name="byteam" class="myhead" autocomplete="off">

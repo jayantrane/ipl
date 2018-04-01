@@ -50,7 +50,7 @@ $_SESSION['onpage']='aboutus';
 
 		</div>
 
-		<audio class="audio" autoplay="true" hidden="true">
+		<audio class="audio" autoplay="true" hidden="true" loop="true">
 			<source src="css/audio/StarWars.mp3" type="audio/mpeg">
 		</audio>
 
