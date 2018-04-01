@@ -38,8 +38,12 @@
     <?php include 'mynavigation.php';?>
     		<div id='content' class="col-md-10 main">
     			<?php for($i=0; $i<mysqli_num_rows($result); $i++) { 
-    				if($schedule[$i]['status'] == 0) {
+    				if($schedule[$i]['status'] == 0 and $_SESSION['isLoggedIn']== true) {
     					$addr = "scorecard.php?id=".($i+1);
+    				}
+    				elseif($schedule[$i]['status'] == 0 and $_SESSION['isLoggedIn']== false) {
+
+    					$addr = "login.php";
     				}
     				else {
     					$addr = "showscorecard.php?id=".($i+1);

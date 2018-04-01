@@ -42,11 +42,37 @@
         
  
         $stmt->closeCursor();
+        $winner =0;
 
+        if($_POST['team1runs'] > $_POST['team2runs']) {
+        	$winner = $_POST['team1id'];
+        }
+        elseif ($_POST['team1runs'] < $_POST['team2runs']) {
+        	$winner = $_POST['team2id'];
+        }
+        else{
+        	$winner = 0;
+        }
+
+        $sql = 'CALL add_row_leaguetable(:team_id1,:team_id2,:winnerid)';
+        $stmt = $pdo->prepare($sql);
+
+
+        echo $_POST['team1id']." ".$_POST['team2id']." ".$winner;
+        $stmt->bindParam(':team_id1', $_POST['team1id'], PDO::PARAM_INT);
+	    $stmt->bindParam(':team_id2', $_POST['team2id'], PDO::PARAM_INT);
+	    $stmt->bindParam(':winnerid', $winner, PDO::PARAM_INT);
+ 
+        
+        $stmt->execute();
+        $stmt->closeCursor();
+
+        $finalscore = $_POST['team1runs']."/".$_POST['team1wickets']."-".$_POST['team2runs']."/".$_POST['team2wickets'];
+        echo $finalscore;
     $ipldb = new mysqli("localhost", "root", "", "ipldb");
 
     $id = $_POST['id'];
-    $query ="UPDATE matches SET status = 1 WHERE pid_matches=$id";
+    $query ="UPDATE matches SET status = 1,result = '$finalscore' WHERE pid_matches=$id";
 
     mysqli_query($ipldb,$query);
 
