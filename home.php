@@ -3,8 +3,30 @@ session_start();
 if(empty($_SESSION['isLoggedIn']))
   $_SESSION['isLoggedIn'] = false;
 $_SESSION['onpage'] = 'home';
+?>
+<?php
 
-$mysqli=mysqli_connect("localhost","root","","ipldb");
+$mysqli = mysqli_connect("localhost","root","","ipldb");
+if (!empty($_POST['username']) 
+               && !empty($_POST['password'])) {
+  
+  $_SESSION['user']=$_POST['username'];
+  $_SESSION['pass']=$_POST['password'];
+
+  $sql="select * from users where username='".$_SESSION['user']."' and password='".$_SESSION['pass']."'  ";
+
+  $result=mysqli_query($mysqli,$sql);
+
+  if(mysqli_num_rows($result)){
+    $_SESSION['isLoggedIn'] = true;
+    header('Location: '.$_SERVER['REQUEST_URI']);
+
+  }
+  else{
+    echo "You have entered wrong credentials";
+
+  }
+}
 
 $yep=mt_rand(1,8);
 
@@ -188,30 +210,3 @@ $image2="css/images/".array_search(strtolower($values1[3]),array_map('strtolower
 
 </body>
 </html>
-<?php
-
-$mysqli = mysqli_connect("localhost","root","","ipldb");
-if (!empty($_POST['username']) 
-               && !empty($_POST['password'])) {
-  
-  $_SESSION['user']=$_POST['username'];
-  $_SESSION['pass']=$_POST['password'];
-
-  $sql="select * from users where username='".$_SESSION['user']."' and password='".$_SESSION['pass']."'  ";
-
-  $result=mysqli_query($mysqli,$sql);
-
-  if(mysqli_num_rows($result)){
-    echo "You have successfully registered";
-    $_SESSION['isLoggedIn'] = true;
-    Header('Location: '.$_SERVER['PHP_SELF']);
-    Exit(); //optional
-
-  }
-  else{
-    echo "You have entered wrong credentials";
-
-  }
-}
-
- ?>
