@@ -8,9 +8,9 @@
     height: 2cm;
 }
 .match {
-	/*margin-left: 30vw;*/ 
+	margin-left: 88mm; 
 	margin-bottom: 0vh;
-	background: rgb(100,100,200);
+	/*background: rgb(100,100,200);*/
 	color: #FFF;
 
 }
@@ -18,4 +18,8 @@
 	margin-top: 2vh;
 	text-align: left;
 	color: rgb(135,185,160);
+}
+
+#matchno {
+	margin-top: 6vh;
 }

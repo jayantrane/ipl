@@ -32,6 +32,7 @@ while($row=mysqli_fetch_array($result,MYSQLI_NUM)){
     <link rel="stylesheet" href="css/leaguetable.css">
 
 	<title>IPL</title>
+	<link rel="icon" href="css/images/ipl-logo1.jpg">
 </head>
 
 <body>

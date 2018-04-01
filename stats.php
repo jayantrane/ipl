@@ -25,6 +25,7 @@ $_SESSION['onpage']="players";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 	<title>IPL</title>
+	<link rel="icon" href="css/images/ipl-logo1.jpg">
 </head>
 
 <body>

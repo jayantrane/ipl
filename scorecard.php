@@ -61,6 +61,8 @@
     
     <link type="text/css" rel="stylesheet" href="css/schedule.css">
     <link type="text/css" rel="stylesheet" href="css/scorecard.css">
+
+	<link rel="icon" href="css/images/ipl-logo1.jpg">
 	<title>IPL</title>
 </head>
 

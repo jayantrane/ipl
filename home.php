@@ -47,9 +47,9 @@ $image2="css/images/".array_search(strtolower($values1[3]),array_map('strtolower
 
     <link rel="stylesheet" href="css/home.css">
     
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <title>IPL</title>
+    <link rel="icon" href="css/images/ipl-logo1.jpg">
 </head>
 <body>
 
@@ -58,120 +58,123 @@ $image2="css/images/".array_search(strtolower($values1[3]),array_map('strtolower
     <?php include 'mynavigation.php';?>
 
         <div id='content' class="col-md-10 main">
-          
-          <div class="row">
+            <div class="row" >
 
-            <div class="col-md-4">
-              <div class="card text-center">
-                  <img class="card-img-top" src="<?php echo $image ?>">
-                  <div class="card-body">
-                    <h5 class="card-title team-name"><?= $values[1] ?>
-                  </div>
-              </div>
-            </div>
 
-            <div class="col-md-8">
-              <div class="card text-center cd">
-                  <img class="card-img-top" src="<?php echo $image1 ?>" > <b class="vstext">v/s</b> 
-                  <img class="card-img-top" src="<?php echo $image2 ?>" >
-                  <div class="card-body">
-                    <h5 class="card-title team-name"><?= $values1[2] ?> v/s <?= $values1[3] ?>
-                    <h5 class="card-title team-name"><?= $values1[1] ?>
-                    <h5 class="card-title team-name"><?= $values1[4] ?>
-                    <h5 class="card-title team-name"><?= $status[$values1[5]] ?>
-                  </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="col-md-5 cd">
-              <div class="card text-center">
-                <iframe src="https://www.youtube.com/embed/1zfSKRqh1Vs" width="420" height="315"></iframe>
-                <div class="card-body">
-                  <h5 class="card-title team-name">Probable Playing XI of MI
+              <div class="col-md-12">
+                <div class="card cd" >
+                    <div class="row" style="margin-left: 10vw">
+      	          	  <div class="col-md-4">
+      	               	<img class="card-img-top" style="text-align: right;" src="<?php echo $image1 ?>" >
+      	              </div>
+      	              <div class="col-md-1 vstext" >
+      	               	 <b>v/s</b> 
+      	              </div>
+      	              <div class="col-md-7">
+    	                  <img class="card-img-top" style="text-align: left;" src="<?php echo $image2 ?>" >
+                      </div>
+                    </div>
+                    <div class="card-body row text-center" style="margin-right: 5vw;">
+                      <h4 class="card-title team-name"><?= $values1[2] ?> v/s <?= $values1[3] ?>
+                      <h4 class="card-title team-name"><?= $values1[1] ?>
+                      <h4 class="card-title team-name"><?= $values1[4] ?>
+                      <h4 class="card-title team-name"><?= $status[$values1[5]] ?>
+                    </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-md-5 cd">
-              <div class="card text-center">
-                <iframe src="https://www.youtube.com/embed/igSHFeysDXo" width="400" height="315"></iframe>
-                <div class="card-body">
-                  <h5 class="card-title team-name">Probable Playing XI of CSK
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="col-md-5 cd">
-              <div class="card text-center">
-                <iframe src="https://www.youtube.com/embed/aIjpJPDCIaI" width="420" height="315"></iframe>
-                <div class="card-body">
-                  <h5 class="card-title team-name">Probable Playing XI of RCB
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-5 cd">
-              <div class="card text-center">
-                <iframe src="https://www.youtube.com/embed/fz7w_K0akxk" width="400" height="315"></iframe>
-                <div class="card-body">
-                  <h5 class="card-title team-name">Probable Playing XI of KKR
-                </div>
-              </div>
             </div>
 
             <div class="row">
 
-            <div class="col-md-5 cd">
-              <div class="card text-center">
-                <iframe src="https://www.youtube.com/embed/" width="420" height="315"></iframe>
-                <div class="card-body">
-                  <h5 class="card-title team-name">Probable Playing XI of SRH
+              <div class="col-md-5 cd">
+                <div class="card text-center">
+                  <iframe src="https://www.youtube.com/embed/1zfSKRqh1Vs" width="420" height="315"></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title team-name">Probable Playing XI of MI
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-md-5 cd">
-              <div class="card text-center">
-                <iframe src="https://www.youtube.com/embed/vPGkqGszzGs" width="400" height="315"></iframe>
-                <div class="card-body">
-                  <h5 class="card-title team-name">Probable Playing XI of RR
+              <div class="col-md-5 cd">
+                <div class="card text-center">
+                  <iframe src="https://www.youtube.com/embed/igSHFeysDXo" width="400" height="315"></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title team-name">Probable Playing XI of CSK
+                  </div>
                 </div>
               </div>
+
             </div>
 
-          </div>
+            <div class="row">
 
-          <div class="row">
-
-            <div class="col-md-5 cd">
-              <div class="card text-center">
-                <iframe src="https://www.youtube.com/embed/asOKH8_8Eac" width="420" height="315"></iframe>
-                <div class="card-body">
-                  <h5 class="card-title team-name">Probable Playing XI of KXIP
+              <div class="col-md-5 cd">
+                <div class="card text-center">
+                  <iframe src="https://www.youtube.com/embed/aIjpJPDCIaI" width="420" height="315"></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title team-name">Probable Playing XI of RCB
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-md-5 cd">
-              <div class="card text-center">
-                <iframe src="https://www.youtube.com/embed/isZA9PeTrWg" width="400" height="315"></iframe>
-                <div class="card-body">
-                  <h5 class="card-title team-name">Probable Playing XI of DD
+              <div class="col-md-5 cd">
+                <div class="card text-center">
+                  <iframe src="https://www.youtube.com/embed/fz7w_K0akxk" width="400" height="315"></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title team-name">Probable Playing XI of KKR
+                  </div>
                 </div>
               </div>
+
+              <div class="row">
+
+              <div class="col-md-5 cd">
+                <div class="card text-center">
+                  <iframe src="https://www.youtube.com/embed/" width="420" height="315"></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title team-name">Probable Playing XI of SRH
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-5 cd">
+                <div class="card text-center">
+                  <iframe src="https://www.youtube.com/embed/vPGkqGszzGs" width="400" height="315"></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title team-name">Probable Playing XI of RR
+                  </div>
+                </div>
+              </div>
+
             </div>
 
-          </div>
+            <div class="row">
 
-        </div>
+              <div class="col-md-5 cd">
+                <div class="card text-center">
+                  <iframe src="https://www.youtube.com/embed/asOKH8_8Eac" width="420" height="315"></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title team-name">Probable Playing XI of KXIP
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-5 cd">
+                <div class="card text-center">
+                  <iframe src="https://www.youtube.com/embed/isZA9PeTrWg" width="400" height="315"></iframe>
+                  <div class="card-body">
+                    <h5 class="card-title team-name">Probable Playing XI of DD
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          
+      </div>
+    </div>
+  </div>
   
     <!-- SCRIPTS -->
     <!-- JQuery -->
@@ -181,19 +184,7 @@ $image2="css/images/".array_search(strtolower($values1[3]),array_map('strtolower
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-    <script type="text/javascript">
-            $(document).ready(function () {
-                $("#sidebar").mCustomScrollbar({
-                    theme: "minimal"
-                });
-
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar, #content').toggleClass('active');
-                    $('.collapse.in').toggleClass('in');
-                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-                });
-            });
-    </script>
+    
 
 </body>
 </html>

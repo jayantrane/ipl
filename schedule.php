@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="css/mynavigation.css">
     
     <link type="text/css" rel="stylesheet" href="css/schedule.css">
+
+    <link rel="icon" href="css/images/ipl-logo1.jpg">
 	<title>IPL</title>
 </head>
 
@@ -47,7 +49,7 @@
     				$id1=(string)array_search($schedule[$i]['fid_team1'], $teams);
     				$id2=(string)array_search($schedule[$i]['fid_team2'], $teams);
     			?>
-					<h2 class="match text-center" >Match <?php echo $i+1; ?></h2>
+					<h3 id="matchno" class="match" ><b>Match <?php echo $i+1; ?></b></h3>
 				
 					<a href=<?php echo $addr;?>>
 					<div class="card-spacing">

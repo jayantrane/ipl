@@ -14,8 +14,7 @@
 	color: white;
 }
 
-body{
-	background: url(images/login1.jpg) no-repeat center center fixed; 
+body{ 
  	 -webkit-background-size: cover;
   	-moz-background-size: cover;
  	 -o-background-size: cover;
@@ -64,6 +63,7 @@ th,td{
 }
 
 table{
+	margin-top: 5vh;
 	background: #fff;
 }
 

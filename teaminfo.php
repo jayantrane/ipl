@@ -40,7 +40,9 @@
     <link rel="stylesheet" href="css/mynavigation.css">
     
     <link type="text/css" rel="stylesheet" href="css/teams.css">
+
 	<title>IPL</title>
+	<link rel="icon" href="css/images/ipl-logo1.jpg">
 </head>
 
 <body>
