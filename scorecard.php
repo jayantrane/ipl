@@ -97,23 +97,23 @@
 							          </td>
 							          <td>
 							          	<?php $str = "1".$i."1"; ?>
-							            <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							            <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "1".$i."2"; ?>
- 										<input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+ 										<input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "1".$i."3"; ?>
-							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "1".$i."4"; ?>
-							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "1".$i."5"; ?>
-							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          
 							        </tr>
@@ -149,23 +149,23 @@
 							          </td>
 							          <td>
 							          	<?php $str = "2".$i."1"; ?>
-							            <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							            <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "2".$i."2"; ?>
- 										<input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+ 										<input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "2".$i."3"; ?>
-							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "2".$i."4"; ?>
-							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "2".$i."5"; ?>
-							             <input type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          
 							        </tr>

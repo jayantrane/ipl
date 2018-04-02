@@ -107,7 +107,7 @@ session_start();
 						      		<th class="tl">ER</th>
 						      	</tr>
 						    </thead>
-						    <?php for($i=0;$i<11&&$plinfo1[$i]['overs']!=0;$i++) { ?>
+						    <?php for($i=0;$i<11;$i++) { if($plinfo1[$i]['overs']!=0) { ?>
 						      	<tr>
 						      		<td><h4><?php echo $name1[$i][0]; ?></h4></td>
 						      		<td class="tl"><?php echo $plinfo1[$i]['overs']; ?></td>
@@ -115,7 +115,7 @@ session_start();
 						      		<td class="tl"><?php echo $plinfo1[$i]['runsconceded']; ?></td>
 						      		<td class="tl"><?php echo $plinfo1[$i]['economy']; ?></td>
 						      	</tr>
-						     <?php } ?>
+						     <?php } } ?>
 						  </table>
 					  </div>
 
@@ -151,7 +151,7 @@ session_start();
 						      		<th class="tl">ER</th>
 						      	</tr>
 						    </thead>
-						    <?php for($i=0;$i<11&&$plinfo2[$i]['overs']!=0;$i++) { ?>
+						    <?php for($i=0;$i<11;$i++) { if($plinfo2[$i]['overs']!=0) { ?>
 						      	<tr>
 						      		<td><h4><?php echo $name1[$i][0]; ?></h4></td>
 						      		<td class="tl"><?php echo $plinfo2[$i]['overs']; ?></td>
@@ -159,7 +159,7 @@ session_start();
 						      		<td class="tl"><?php echo $plinfo2[$i]['runsconceded']; ?></td>
 						      		<td class="tl"><?php echo $plinfo2[$i]['economy']; ?></td>
 						      	</tr>
-						     <?php } ?>
+						     <?php } } ?>
 						  </table>
 					  </div>
 					 
