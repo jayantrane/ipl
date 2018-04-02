@@ -12,15 +12,21 @@
   <!-- <div class="collapse navbar-collapse s">-->
     <ul class="nav navbar-nav navbar-right">
       <li>
+        <?php if($_SESSION['isLoggedIn']) { ?>
+         <a href="#"><span class="glyphicon glyphicon-th-large"></span> <?php echo $_SESSION['user']; ?></a>
+       <?php } else {?>
+          <a href="signup.php"><span class="glyphicon glyphicon-user"></span>Sign Up</a>
+       <?php } ?>
+           
+      </li>
+      <li>
         <?php if(!$_SESSION['isLoggedIn']) { ?>
          <a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
        <?php } else {?>
           <a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
        <?php } ?>
-           
-      </li>
-    </ul>
-  <!--</div>/.nav-collapse --> 
+
+       </div>
 
 </div><!--/.navbar -->
 

@@ -13,12 +13,14 @@ if (!empty($_POST['username'])
   $_SESSION['user']=$_POST['username'];
   $_SESSION['pass']=$_POST['password'];
 
+
   $sql="select * from users where username='".$_SESSION['user']."' and password='".$_SESSION['pass']."'  ";
 
   $result=mysqli_query($mysqli,$sql);
 
-  if(mysqli_num_rows($result)){
+  if($row=mysqli_fetch_array($result,MYSQLI_NUM)){
     $_SESSION['isLoggedIn'] = true;
+    $_SESSION['username'] = $row['name'];
     header('Location: '.$_SERVER['REQUEST_URI']);
 
   }
@@ -26,6 +28,24 @@ if (!empty($_POST['username'])
     echo "You have entered wrong credentials";
 
   }
+}
+if (!empty($_POST['name']) ) {
+  
+  $uname1=$_POST['username'];
+  $pass1=$_POST['password'];
+  $name1=$_POST['name'];
+  $email1=$_POST['email'];
+
+  $sql="insert into users(username,password,name,email) values('".$uname1."','".$pass1."','".$name1."','".$email1."')";
+
+  mysqli_query($mysqli,$sql);
+
+  
+    $_SESSION['isLoggedIn'] = true;
+    $_SESSION['user'] = $_POST['name'];
+    header('Location: '.$_SERVER['REQUEST_URI']);
+
+  
 }
 
 $yep=mt_rand(1,8);
