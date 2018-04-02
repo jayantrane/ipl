@@ -144,7 +144,7 @@
 				    			<div class = "form-group">
 							        <tr>
 							          <td>
-							            <p class="form-control-static"><?php echo $team1[$i]['name']; ?></p>
+							            <p class="form-control-static"><?php echo $team2[$i]['name']; ?></p>
 							              
 							          </td>
 							          <td>
