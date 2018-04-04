@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2018 at 01:15 PM
+-- Generation Time: Apr 04, 2018 at 01:33 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -56,14 +56,14 @@ SET played2 = (SELECT matches_played FROM leaguetable WHERE team_id = team_id2) 
 IF (winnerid = team_id1) THEN
 	SET win1 = win1 + 1;
     SET loss2 = loss2 + 1;
-    SET points1 = points1 + 3;
+    SET points1 = points1 + 2;
     UPDATE leaguetable SET matches_played=played1,win=win1,points=points1 WHERE team_id=team_id1;
     UPDATE leaguetable SET matches_played=played2,loss=loss2 WHERE team_id=team_id2;
     
 ELSEIF (winnerid = team_id2) THEN
 	SET win2 = win2 + 1;
     SET loss1 = loss1 + 1;
-     SET points2 = points2 + 3;
+     SET points2 = points2 + 2;
    
     UPDATE leaguetable SET matches_played=played2,win=win2,points=points2 WHERE team_id=team_id2;
     UPDATE leaguetable SET matches_played=played1,loss=loss1 WHERE team_id=team_id1;
@@ -162,13 +162,13 @@ CREATE TABLE `leaguetable` (
 --
 
 INSERT INTO `leaguetable` (`id`, `name`, `matches_played`, `win`, `loss`, `draw`, `points`, `team_id`) VALUES
-(1, 'Mumbai Indians', 1, 1, 0, 0, 3, 1),
+(1, 'Mumbai Indians', 1, 1, 0, 0, 2, 1),
 (2, 'Chennai Super Kings', 1, 0, 1, 0, 0, 2),
 (3, 'Royal Challengers Banglore', 0, 0, 0, 0, 0, 3),
 (4, 'Kolkata Knight Riders', 0, 0, 0, 0, 0, 4),
 (5, 'Sunrisers Hyderabad', 0, 0, 0, 0, 0, 5),
 (6, 'Rajasthan Royals', 0, 0, 0, 0, 0, 6),
-(7, 'Kings XI Punjab', 1, 1, 0, 0, 3, 7),
+(7, 'Kings XI Punjab', 1, 1, 0, 0, 2, 7),
 (8, 'Delhi Daredevils', 1, 0, 1, 0, 0, 8);
 
 -- --------------------------------------------------------
