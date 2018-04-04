@@ -86,7 +86,7 @@ session_start();
 						      		<th class="tl">Strike Rate</th>
 						      	</tr>
 						    </thead>
-						    <?php for($i=0;$i<11;$i++) { if($plinfo1[$i]['strikerate']!=0) { ?>
+						    <?php for($i=0;$i<11;$i++) { if($plinfo1[$i]['balls']!=0&&$plinfo1[$i]['runs']!=0) { ?>
 						      	<tr>
 						      		<td><h4><?php echo $name1[$i][0]; ?></h4></td>
 						      		<td class="tl"><?php echo $plinfo1[$i]['runs']; ?></td>
@@ -130,7 +130,7 @@ session_start();
 						      		<th>Strike Rate</th>
 						      	</tr>
 						    </thead>
-						    <?php for($i=0;$i<11;$i++) { if($plinfo2[$i]['strikerate']!=0) { ?>
+						    <?php for($i=0;$i<11;$i++) { if($plinfo2[$i]['balls']!=0&&$plinfo2[$i]['runs']!=0) { ?>
 						      	<tr>
 						      		<td><h4><?php echo $name2[$i][0]; ?></h4></td>
 						      		<td><?php echo $plinfo2[$i]['runs']; ?></td>
@@ -153,7 +153,7 @@ session_start();
 						    </thead>
 						    <?php for($i=0;$i<11;$i++) { if($plinfo2[$i]['overs']!=0) { ?>
 						      	<tr>
-						      		<td><h4><?php echo $name1[$i][0]; ?></h4></td>
+						      		<td><h4><?php echo $name2[$i][0]; ?></h4></td>
 						      		<td class="tl"><?php echo $plinfo2[$i]['overs']; ?></td>
 						      		<td class="tl"><?php echo $plinfo2[$i]['wickets']; ?></td>
 						      		<td class="tl"><?php echo $plinfo2[$i]['runsconceded']; ?></td>
