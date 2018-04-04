@@ -12,6 +12,7 @@ $sql = 'CALL add_row_scorecard(:matchid1,:playerid1,:runs1,:balls1,:overs1,:wick
 $stmt = $pdo->prepare($sql);
 for($i=0; $i<11; $i++) {
 	$pid = $_POST['team1id']*100+($i+1);
+	#echo $_POST['1'.$i.'1']."   ".$_POST['1'.$i.'2']."   ".$_POST['1'.$i.'3']."   ".$_POST['1'.$i.'4']."   ".$_POST['1'.$i.'5']."   <br>";
 	$stmt->bindParam(':matchid1', $_POST['id'], PDO::PARAM_INT);
 	$stmt->bindParam(':playerid1', $pid, PDO::PARAM_INT);
 	$stmt->bindParam(':runs1', $_POST['1'.$i.'1'], PDO::PARAM_INT);

@@ -20,6 +20,7 @@ $_SESSION['onpage']='aboutus';
     
     <link type="text/css" rel="stylesheet" href="css/aboutus.css">
 
+	<link rel="icon" href="css/images/ipl-logo1.jpg">
 	<title>IPL</title>
 </head>
 

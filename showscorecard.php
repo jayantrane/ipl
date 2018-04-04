@@ -86,14 +86,14 @@ session_start();
 						      		<th class="tl">Strike Rate</th>
 						      	</tr>
 						    </thead>
-						    <?php for($i=0;$i<11;$i++) { ?>
+						    <?php for($i=0;$i<11;$i++) { if($plinfo1[$i]['strikerate']!=0) { ?>
 						      	<tr>
 						      		<td><h4><?php echo $name1[$i][0]; ?></h4></td>
 						      		<td class="tl"><?php echo $plinfo1[$i]['runs']; ?></td>
 						      		<td class="tl"><?php echo $plinfo1[$i]['balls']; ?></td>
 						      		<td class="tl"><?php echo $plinfo1[$i]['strikerate']; ?></td>
 						      	</tr>
-						     <?php } ?>
+						     <?php } } ?>
 						  </table>
 					  </div>
 					  <div class="row myrow">
@@ -130,14 +130,14 @@ session_start();
 						      		<th>Strike Rate</th>
 						      	</tr>
 						    </thead>
-						    <?php for($i=0;$i<11;$i++) { ?>
+						    <?php for($i=0;$i<11;$i++) { if($plinfo2[$i]['strikerate']!=0) { ?>
 						      	<tr>
 						      		<td><h4><?php echo $name2[$i][0]; ?></h4></td>
 						      		<td><?php echo $plinfo2[$i]['runs']; ?></td>
 						      		<td><?php echo $plinfo2[$i]['balls']; ?></td>
 						      		<td><?php echo $plinfo2[$i]['strikerate']; ?></td>
 						      	</tr>
-						     <?php } ?>
+						     <?php } } ?>
 						  </table>
 					  </div>
 					  <div class="row myrow">

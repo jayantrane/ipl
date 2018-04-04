@@ -97,23 +97,23 @@
 							          </td>
 							          <td>
 							          	<?php $str = "1".$i."1"; ?>
-							            <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							            <input value="0" type="number" min="0" step="1" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "1".$i."2"; ?>
- 										<input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+ 										<input value="0" type="number" min="0" step="1" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "1".$i."3"; ?>
-							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" min="0" step="1" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "1".$i."4"; ?>
-							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" min="0" step="1" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "1".$i."5"; ?>
-							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" min="0" step="1" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          
 							        </tr>
@@ -149,23 +149,23 @@
 							          </td>
 							          <td>
 							          	<?php $str = "2".$i."1"; ?>
-							            <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							            <input value="0" type="number" min="0" step="1" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "2".$i."2"; ?>
- 										<input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+ 										<input value="0" type="number" min="0" step="1" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "2".$i."3"; ?>
-							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" min="0" step="1" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "2".$i."4"; ?>
-							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" min="0" step="1" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          <td>
 							          	<?php $str = "2".$i."5"; ?>
-							             <input value="0" type="number" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
+							             <input value="0" type="number" min="0" step="1" class="form-control" size="4" name="<?php echo htmlspecialchars($str); ?>">
 							          </td>
 							          
 							        </tr>
@@ -195,16 +195,16 @@
 					    <tbody>
 					        <tr>
 					            <td>
-					            	<input type="number" class="form-control" size="4" name="team1runs">
+					            	<input type="number" value="0" min="0" step="1" class="form-control" size="4" name="team1runs">
 					            </td>
 					            <td>
-					            	<input type="number" class="form-control" size="4" name="team1wickets">
+					            	<input type="number" value="0" min="0" step="1" class="form-control" size="4" name="team1wickets">
 					            </td>
 					            <td>
-					            	<input type="number" class="form-control" size="4" name="team2runs">
+					            	<input type="number" value="0" min="0" step="1" class="form-control" size="4" name="team2runs">
 					            </td>
 					            <td>
-					            	<input type="number" class="form-control" size="4" name="team2wickets">
+					            	<input type="number" value="0" min="0" step="1" class="form-control" size="4" name="team2wickets">
 					            </td>
 					        </tr>
 					    </tbody>
